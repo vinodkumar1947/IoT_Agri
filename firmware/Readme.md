@@ -76,4 +76,41 @@ The logs provide detailed feedback on the connection status between the ESP8266 
 ```plaintext
 Connecting to MQTT broker...
 Connected to MQTT broker
+#### **Failed Connection**
 
+- If the ESP8266 fails to connect, the log will display a failure message along with a specific return code.
+- The return code helps diagnose the reason for the connection failure.
+
+#### **Common Return Codes and Their Meanings**
+- **`-1`**: Incorrect broker address or port.
+- **`-2`**: Network connection failed (e.g., Wi-Fi issue).
+- **`-3`**: Connection to the broker was lost.
+- **`-4`**: Authentication failed (invalid username or password).
+- **`-5`**: Client is not authorized to connect.
+
+#### **Example Logs for Failed Connection**
+```plaintext
+Connecting to MQTT broker...
+Failed with state -1
+- **Indicates that the broker address or port is incorrect:**
+  - This error occurs when the `mqttServer` or `mqttPort` values do not match the MQTT broker's actual address or port.
+  - **Steps to Fix:**
+    1. Verify the broker's IP address:
+       - For a local broker (e.g., Mosquitto on Raspberry Pi), check the Raspberry Pi's IP address using `ifconfig` or `ip a` on the Pi.
+       - Replace the `mqttServer` value in the code with the correct IP address.
+    2. Confirm the MQTT broker's port:
+       - The default port for MQTT is `1883`. Ensure the `mqttPort` in the code matches the broker's configuration.
+       - If using a secure connection (MQTT over TLS), the default port is usually `8883`.
+    3. Test the broker address and port:
+       - Use an MQTT client like **MQTT Explorer** or the command-line tool `mosquitto_pub` to test connectivity to the broker:
+         ```bash
+         mosquitto_pub -h <broker_ip> -p <port> -t "test/topic" -m "hello"
+         ```
+       - Replace `<broker_ip>` and `<port>` with the broker's IP address and port.
+
+  - Example Log for Incorrect Broker Address/Port:
+    ```plaintext
+    Connecting to MQTT broker...
+    Failed with state -1
+    ```
+    
