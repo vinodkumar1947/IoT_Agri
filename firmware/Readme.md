@@ -60,57 +60,56 @@ This code is designed to read sensor data from a **DHT11** (temperature and humi
 - Open the **Arduino Serial Monitor** to observe the program's output.
 - Set the baud rate to `115200` to ensure correct data display.
 
-#### **Logs You Will See:**
-1. **Wi-Fi Connection Logs:**
-   - Displays the connection progress to the specified Wi-Fi network.
-   ```plaintext
-   Connecting to Wi-Fi...
-   Connected to the Wi-Fi network
+
+# Logs You Will See
+
+### **1. Wi-Fi Connection Logs**
+- Displays the connection progress to the specified Wi-Fi network.
+```plaintext
+Connecting to Wi-Fi...
+Connected to the Wi-Fi network
+```
 
 ### **2. MQTT Broker Connection Logs**
-
-The logs provide detailed feedback on the connection status between the ESP8266 and the MQTT broker.
-
-#### **Successful Connection**
-- Indicates that the ESP8266 has successfully connected to the MQTT broker.
+- Shows the connection status to the MQTT broker.
 ```plaintext
 Connecting to MQTT broker...
 Connected to MQTT broker
-#### **Failed Connection**
-
-- If the ESP8266 fails to connect, the log will display a failure message along with a specific return code.
-- The return code helps diagnose the reason for the connection failure.
-
-#### **Common Return Codes and Their Meanings**
-- **`-1`**: Incorrect broker address or port.
-- **`-2`**: Network connection failed (e.g., Wi-Fi issue).
-- **`-3`**: Connection to the broker was lost.
-- **`-4`**: Authentication failed (invalid username or password).
-- **`-5`**: Client is not authorized to connect.
-
-#### **Example Logs for Failed Connection**
+```
+- If connection fails, it provides the failure state:
 ```plaintext
-Connecting to MQTT broker...
-Failed with state -1
-- **Indicates that the broker address or port is incorrect:**
-  - This error occurs when the `mqttServer` or `mqttPort` values do not match the MQTT broker's actual address or port.
-  - **Steps to Fix:**
-    1. Verify the broker's IP address:
-       - For a local broker (e.g., Mosquitto on Raspberry Pi), check the Raspberry Pi's IP address using `ifconfig` or `ip a` on the Pi.
-       - Replace the `mqttServer` value in the code with the correct IP address.
-    2. Confirm the MQTT broker's port:
-       - The default port for MQTT is `1883`. Ensure the `mqttPort` in the code matches the broker's configuration.
-       - If using a secure connection (MQTT over TLS), the default port is usually `8883`.
-    3. Test the broker address and port:
-       - Use an MQTT client like **MQTT Explorer** or the command-line tool `mosquitto_pub` to test connectivity to the broker:
-         ```bash
-         mosquitto_pub -h <broker_ip> -p <port> -t "test/topic" -m "hello"
-         ```
-       - Replace `<broker_ip>` and `<port>` with the broker's IP address and port.
+Failed with state -2
+```
 
-  - Example Log for Incorrect Broker Address/Port:
-    ```plaintext
-    Connecting to MQTT broker...
-    Failed with state -1
-    ```
-    
+### **3. Sensor Data Logs**
+- Logs raw sensor readings from the DHT11 and soil moisture sensor.
+```plaintext
+Raw Sensor Data: 45,23,1
+```
+
+### **4. Encryption Logs**
+- Shows the encrypted data in HEX format after processing the sensor data.
+```plaintext
+Encrypted Data (HEX): 4f2e7b1d6a8c9d02b3
+```
+
+### **5. MQTT Publishing Logs**
+- Indicates whether the data was successfully published to the MQTT broker.
+```plaintext
+Encrypted data published to MQTT topic
+```
+- If publishing fails:
+```plaintext
+Failed to publish data to MQTT topic
+```
+
+---
+
+### **How to Use Serial Monitor**
+- Open the **Arduino IDE** and select `Tools > Serial Monitor` (or press `Ctrl+Shift+M`).
+- Verify the baud rate is set to `115200`.
+- Use the logs to troubleshoot issues such as:
+  - Wi-Fi connection problems.
+  - MQTT broker connectivity.
+  - Sensor data validity.
+  - Encryption process results.
