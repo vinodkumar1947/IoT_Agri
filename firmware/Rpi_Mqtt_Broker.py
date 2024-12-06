@@ -5,6 +5,7 @@ import requests
 from datetime import datetime, timezone
 from google.oauth2 import service_account
 import google.auth.transport.requests
+import time # Import the time module for measuring elapsed time
 
 # Logging configuration
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -45,15 +46,21 @@ def rc4_crypt(s, data):
 # RC4 Decrypt Function
 def rc4_decrypt(data_hex, key):
     encrypted_data = binascii.unhexlify(data_hex)
+    start_time = time.time()  # Record the start time
     s = rc4_init(key.encode())  # Initialize RC4 with the key
     decrypted_data = rc4_crypt(s, encrypted_data)
+    decryption_time = time.time() - start_time  # Calculate elapsed time
+    logging.info(f"Decryption Time: {decryption_time:.6f} seconds")  # Print decryption time
     return decrypted_data.decode()  # Convert decrypted bytes to string
 
 # RC4 Encrypt Function
 def rc4_encrypt(data, key):
+    start_time = time.time()  # Record the start time
     s = rc4_init(key.encode())  # Initialize RC4 with the key
     data_bytes = data.encode()  # Convert string to bytes
     encrypted_data = rc4_crypt(s, data_bytes)  # Encrypt data
+    encryption_time = time.time() - start_time  # Calculate elapsed time
+    logging.info(f"Encryption Time: {encryption_time:.6f} seconds")  # Print encryption time
     return binascii.hexlify(encrypted_data).decode()  # Return HEX string
 
 # Fetch Access Token for Firestore
