@@ -44,7 +44,6 @@ def rc4_crypt(s, data):
 
 # RC4 Decrypt Function
 def rc4_decrypt(data_hex, key):
-    # Convert hexadecimal string to bytes
     encrypted_data = binascii.unhexlify(data_hex)
     s = rc4_init(key.encode())  # Initialize RC4 with the key
     decrypted_data = rc4_crypt(s, encrypted_data)
@@ -59,7 +58,6 @@ def rc4_encrypt(data, key):
 
 # Fetch Access Token for Firestore
 def get_access_token():
-    """Generate an access token for Firestore using a service account."""
     credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=["https://www.googleapis.com/auth/datastore"]
     )
@@ -68,7 +66,7 @@ def get_access_token():
     return credentials.token
 
 # Send Data to Firestore
-def send_to_firestore(encrypted_data):
+def send_to_firestore(humidity, temperature, soil_moisture):
     access_token = get_access_token()  # Fetch a new access token dynamically
     headers = {
         "Authorization": f"Bearer {access_token}",
@@ -76,9 +74,20 @@ def send_to_firestore(encrypted_data):
     }
     timestamp = datetime.now(timezone.utc).isoformat()
 
+    # Encryption key
+    #encryption_key = "newencryptionkey123"
+    encryption_key= "9951407307abcdef"
+
+    # Encrypt individual sensor values
+    encrypted_humidity = rc4_encrypt(humidity, encryption_key)
+    encrypted_temperature = rc4_encrypt(temperature, encryption_key)
+    encrypted_soil_moisture = rc4_encrypt(soil_moisture, encryption_key)
+
     data = {
         "fields": {
-            "encrypted_data": {"stringValue": encrypted_data},
+            "humidity": {"stringValue": encrypted_humidity},
+            "temperature": {"stringValue": encrypted_temperature},
+            "soil_moisture": {"stringValue": encrypted_soil_moisture},
             "timestamp": {"stringValue": timestamp}
         }
     }
@@ -109,7 +118,7 @@ def on_message(client, userdata, msg):
             logging.error("Received an invalid HEX string: Odd-length string")
             return
 
-        # RC4 decryption key (must match the ESP8266 key)
+        # RC4 decryption key
         decryption_key = "9951407307abcdef"
 
         # Decrypt the message
@@ -120,14 +129,8 @@ def on_message(client, userdata, msg):
         humidity, temperature, soil_moisture = decrypted_message.split(",")
         logging.info(f"Humidity: {humidity}, Temperature: {temperature}, Soil Moisture: {soil_moisture}")
 
-        # Combine and re-encrypt the data
-        combined_data = f"{humidity},{temperature},{soil_moisture}"
-        encryption_key = "newencryptionkey123"  # New key for re-encryption
-        re_encrypted_data = rc4_encrypt(combined_data, encryption_key)
-        logging.info(f"Re-encrypted Data (HEX): {re_encrypted_data}")
-
-        # Send re-encrypted data to Firestore
-        send_to_firestore(re_encrypted_data)
+        # Send individual sensor values to Firestore
+        send_to_firestore(humidity, temperature, soil_moisture)
     except Exception as e:
         logging.error(f"Error processing MQTT message: {e}")
 

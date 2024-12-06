@@ -57,12 +57,23 @@ void rc4_crypt(unsigned char* s, unsigned char* data, int len) {
 // RC4 Encryption function
 String rc4Encrypt(String data, String key) {
   unsigned char s[256];
+
+  // Record the start time
+  unsigned long startTime = millis();
+  
   rc4_init(s, (unsigned char*)key.c_str(), key.length());
 
   unsigned char dataBytes[data.length() + 1];
   strcpy((char*)dataBytes, data.c_str());
   
   rc4_crypt(s, dataBytes, data.length());
+  
+  // Record the end time
+  unsigned long endTime = millis();
+  // Calculate elapsed time
+  unsigned long encryptionTime = endTime - startTime;
+  Serial.print("Encryption Time (ms): ");
+  Serial.println(encryptionTime);
   
   String encrypted = "";
   for (int i = 0; i < data.length(); i++) {
