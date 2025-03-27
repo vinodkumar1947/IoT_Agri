@@ -4,7 +4,6 @@
 
 #define DHTTYPE DHT11
 const int DHTPin = 02;         // use 2 instead of 02 (octal) for clarity
-const int SoilPin = 12;
 #define SBOX_SIZE 256
 
 DHT dht(DHTPin, DHTTYPE);
@@ -111,7 +110,7 @@ void rc4EncryptEnhanced(const char* data, const String& key, unsigned char* encr
 
 void setup() {
   Serial.begin(115200);
-  pinMode(SoilPin, INPUT);
+  pinMode(13, INPUT);
 
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -156,7 +155,6 @@ void loop() {
 
   int h = dht.readHumidity();
   int t = dht.readTemperature();
-  int soil = digitalRead(SoilPin);
 
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read from DHT sensor!");
@@ -164,7 +162,7 @@ void loop() {
   }
 
   char sensorData[32];
-  snprintf(sensorData, sizeof(sensorData), "%d,%d,%d", h, t, soil);
+  snprintf(sensorData, sizeof(sensorData), "%d,%d", h, t);
 
   String encryptionKey = "9951407307abcdef";
   unsigned char encryptedData[64];  // maximum expected size
@@ -185,5 +183,5 @@ void loop() {
     Serial.println("MQTT publish failed - check broker, auth, or connection.");
   }
 
-  delay(3000);
+  delay(30000);
 }
