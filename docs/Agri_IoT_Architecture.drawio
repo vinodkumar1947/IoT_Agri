@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.7 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.7">
   <diagram name="Page-1" id="wRW-kgjHJdiJq9W7ehsS">
-    <mxGraphModel dx="721" dy="298" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="645" dy="393" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -94,50 +94,51 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-2" value="" style="rounded=0;whiteSpace=wrap;html=1;hachureGap=4;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fontColor=default;fillColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="92" y="162" width="88" height="43" as="geometry" />
+          <mxGeometry x="109" y="162.65" width="88" height="43" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-4" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.iot_thing_temperature_humidity_sensor;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https://fonts.googleapis.com/css?family=Architects+Daughter;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="289" y="485.45" width="20.8" height="20.8" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-5" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.iot_thing_temperature_humidity_sensor;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https://fonts.googleapis.com/css?family=Architects+Daughter;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="107" y="172.2" width="20.8" height="20.8" as="geometry" />
+          <mxGeometry x="124" y="172.85" width="20.8" height="20.8" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-6" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn-icons-png.flaticon.com/512/11331/11331784.png;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="152" y="168.3" width="23" height="23" as="geometry" />
+          <mxGeometry x="169" y="168.95000000000002" width="23" height="23" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-8" value="&lt;font&gt;Sensor Node&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="107" y="196" width="60" height="30" as="geometry" />
+          <mxGeometry x="124" y="196.65" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-9" value="&lt;font&gt;Temp &amp;amp; Humid&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=7;fontColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="89" y="181" width="60" height="30" as="geometry" />
+          <mxGeometry x="106" y="181.65" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-10" value="Soil Moist" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="132" y="181" width="60" height="30" as="geometry" />
+          <mxGeometry x="149" y="181.65" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="f4XDB4i8oDPlEhJqoEFg-26" value="RC4 Encry" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=8;fontColor=default;labelBackgroundColor=default;endArrow=classic;" parent="1" source="f4XDB4i8oDPlEhJqoEFg-11" target="f4XDB4i8oDPlEhJqoEFg-14" edge="1">
+        <mxCell id="f4XDB4i8oDPlEhJqoEFg-26" value="Mod RC4 Encry" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=8;fontColor=default;labelBackgroundColor=default;endArrow=classic;" parent="1" source="f4XDB4i8oDPlEhJqoEFg-11" target="f4XDB4i8oDPlEhJqoEFg-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-11" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;gradientColor=none;" parent="1" vertex="1">
-          <mxGeometry x="227" y="159" width="79" height="56" as="geometry" />
+          <mxGeometry x="220" y="157.65" width="79" height="56" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-13" value="MQTT Client(Node MCU)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=9;fontColor=default;" parent="1" vertex="1">
-          <mxGeometry x="236.5" y="170" width="60" height="30" as="geometry" />
+          <mxGeometry x="229.5" y="168.65" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=12;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="f4XDB4i8oDPlEhJqoEFg-14" target="f4XDB4i8oDPlEhJqoEFg-16" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="353.01413793103444" y="243.8568965517242" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f4XDB4i8oDPlEhJqoEFg-21" value="RC4 Encry 2" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=9;fontColor=default;labelBackgroundColor=default;endArrow=classic;" parent="1" source="f4XDB4i8oDPlEhJqoEFg-14" edge="1">
+        <mxCell id="f4XDB4i8oDPlEhJqoEFg-21" value="" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;hachureGap=4;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=9;fontColor=default;labelBackgroundColor=default;endArrow=classic;" parent="1" edge="1">
           <mxGeometry x="-0.0003" relative="1" as="geometry">
             <mxPoint as="offset" />
-            <mxPoint x="211" y="60" as="targetPoint" />
+            <mxPoint x="212" y="60" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="590" y="186" />
-              <mxPoint x="590" y="144" />
-              <mxPoint x="164" y="144" />
-              <mxPoint x="164" y="60" />
+              <mxPoint x="591" y="186" />
+              <mxPoint x="591" y="144" />
+              <mxPoint x="165" y="144" />
+              <mxPoint x="165" y="60" />
             </Array>
+            <mxPoint x="474.03" y="185.64999999999998" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-14" value="MQTT Broker(RPi)" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=9;fontColor=default;fillColor=none;gradientColor=none;" parent="1" vertex="1">
@@ -161,20 +162,20 @@
         <mxCell id="f4XDB4i8oDPlEhJqoEFg-29" value="RC4 Decry" style="shape=singleArrow;whiteSpace=wrap;html=1;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=8;fontColor=default;labelBackgroundColor=default;fillColor=none;gradientColor=none;arrowWidth=0.08358974358974673;arrowSize=0.12471128263602403;" parent="1" vertex="1">
           <mxGeometry x="394" y="61" width="70.16" height="4.12" as="geometry" />
         </mxCell>
-        <mxCell id="lMe3iIH79tzdsqzJYQTI-2" value="1. Collects data from sensors&amp;nbsp;&#xa;2. Applies RC4 encryption&#xa;3. Sends encrypted data via Wi-Fi" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
+        <mxCell id="lMe3iIH79tzdsqzJYQTI-2" value="1. Collects data from sensors&amp;nbsp;&lt;br&gt;2. Applies Mod RC4 encryption&lt;br&gt;3. Sends encrypted data via Wi-Fi" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="213" y="216.65" width="127" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lMe3iIH79tzdsqzJYQTI-3" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#b85450;fillColor=#f8cecc;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.wi_fi;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
-          <mxGeometry x="295.85" y="159" width="9.3" height="9.3" as="geometry" />
+          <mxGeometry x="288.85" y="157.65" width="9.3" height="9.3" as="geometry" />
         </mxCell>
-        <mxCell id="lMe3iIH79tzdsqzJYQTI-4" value="1. Receives RC4 encrypted data&amp;nbsp;&#xa;2. Decrypts data for integrity&#xa;3. Re-encrypts using session key&amp;nbsp;&#xa;4. Forwards data securely to the cloud (via HTTPS)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
+        <mxCell id="lMe3iIH79tzdsqzJYQTI-4" value="1. Receives RC4 encrypted data&amp;nbsp;&lt;br&gt;2. Decrypts data for integrity&lt;br&gt;3. Forwards data securely to the cloud (via HTTPS)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="476" y="196" width="206" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lMe3iIH79tzdsqzJYQTI-5" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#b85450;fillColor=#f8cecc;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.wi_fi;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;rotation=-90;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="366.52" y="162.65" width="10.64" height="10.64" as="geometry" />
         </mxCell>
         <mxCell id="lMe3iIH79tzdsqzJYQTI-6" value="Firestore Database&#xa;&amp;nbsp;- Stores encrypted data securely" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
-          <mxGeometry x="212" y="106.6" width="134" height="18.5" as="geometry" />
+          <mxGeometry x="206" y="103.1" width="134" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="lMe3iIH79tzdsqzJYQTI-7" value="Cloud Functions&#xa;&amp;nbsp;- Decrypts data&#xa;&amp;nbsp;- Prepares for visualization" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=7;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="340" y="97.35" width="101" height="30" as="geometry" />
