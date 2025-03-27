@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.7 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.7">
   <diagram name="Page-1" id="wRW-kgjHJdiJq9W7ehsS">
-    <mxGraphModel dx="645" dy="393" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="555" dy="338" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -168,7 +168,7 @@
         <mxCell id="lMe3iIH79tzdsqzJYQTI-3" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#b85450;fillColor=#f8cecc;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.wi_fi;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="288.85" y="157.65" width="9.3" height="9.3" as="geometry" />
         </mxCell>
-        <mxCell id="lMe3iIH79tzdsqzJYQTI-4" value="1. Receives mod RC4 encrypted data&amp;nbsp;&lt;br&gt;2. Decrypts data for integrity&lt;br&gt;3. Forwards data securely to the cloud (via HTTPS)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
+        <mxCell id="lMe3iIH79tzdsqzJYQTI-4" value="1. Receives mod RC4 encrypted data&amp;nbsp;&lt;br&gt;2. Forwards data securely to the cloud (via HTTPS)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="490.16" y="196.65" width="206" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lMe3iIH79tzdsqzJYQTI-5" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#b85450;fillColor=#f8cecc;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.wi_fi;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;rotation=-90;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
@@ -177,8 +177,8 @@
         <mxCell id="lMe3iIH79tzdsqzJYQTI-6" value="Firestore Database&lt;br&gt;&amp;nbsp;- Stores data securely" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="206" y="103.1" width="134" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="lMe3iIH79tzdsqzJYQTI-7" value="Cloud Functions&lt;br&gt;&amp;nbsp;- Prepares for visualization" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=7;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
-          <mxGeometry x="340" y="97.35" width="101" height="30" as="geometry" />
+        <mxCell id="lMe3iIH79tzdsqzJYQTI-7" value="Cloud Functions&lt;br&gt;&amp;nbsp;- Prepares for visualization&lt;div&gt;- Decrypt received mod-RC4 data&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=7;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
+          <mxGeometry x="333" y="103.1" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lMe3iIH79tzdsqzJYQTI-8" value="Looker Studio&#xa;- Visualizes real- time dashboards&amp;nbsp;&#xa;- Provides insights" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=8;fontColor=default;labelBackgroundColor=default;" parent="1" vertex="1">
           <mxGeometry x="464.16" y="99" width="131.84" height="30" as="geometry" />
