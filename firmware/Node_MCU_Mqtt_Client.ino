@@ -15,7 +15,7 @@ const char* ssid = "Saraswathi";
 const char* password = "12345678";
 
 // MQTT broker configuration
-const char* mqttServer = "192.168.106.11"; // Raspberry Pi IP address
+const char* mqttServer = "192.168.99.11"; // Raspberry Pi IP address
 const int mqttPort = 1883;                 // MQTT broker port
 const char* mqttUser = "neo";              // MQTT username
 const char* mqttPassword = "123456";       // MQTT password
@@ -63,8 +63,10 @@ String rc4Encrypt(String data, String key) {
   
   rc4_init(s, (unsigned char*)key.c_str(), key.length());
 
-  unsigned char dataBytes[data.length() + 1];
-  strcpy((char*)dataBytes, data.c_str());
+  //unsigned char dataBytes[data.length() + 1];
+  //strcpy((char*)dataBytes, data.c_str());
+  unsigned char dataBytes[data.length()];
+  memcpy(dataBytes, data.c_str(), data.length());
   
   rc4_crypt(s, dataBytes, data.length());
   
@@ -146,5 +148,5 @@ void loop() {
   client.loop();
 
   // Delay before sending the next message
-  delay(3000);
+  delay(30000);
 }

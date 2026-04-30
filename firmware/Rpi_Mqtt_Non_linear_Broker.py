@@ -20,48 +20,6 @@ MQTT_PASSWORD = "123456"
 FIRESTORE_URL = "https://firestore.googleapis.com/v1/projects/iotagri-3f696/databases/(default)/documents/rc4_non_linear_test"
 SERVICE_ACCOUNT_FILE = "iotagri-3f696-632b6aee8946.json"
 
-###############################################################################
-#                       Enhanced RC4-Style Encryption                         #
-###############################################################################
-
-a = 3
-b = 7
-SBOX_SIZE = 256
-
-def custom_key_preprocess(key_str, desired_len=32):
-    out = []
-    for i in range(desired_len):
-        val = 0
-        for j in range(len(key_str)):
-            tmp = (ord(key_str[j]) + i * 17 + j * 31) & 0xFF
-            val ^= tmp
-            val = ((val << 1) & 0xFF) | (val >> 7)
-        out.append(val)
-    return out
-
-def enhanced_ksa(key):
-    S = list(range(SBOX_SIZE))
-    j = 0
-    for i in range(SBOX_SIZE):
-        k = key[i % len(key)]
-        f = (k * k + a * k + b) % SBOX_SIZE
-        j = (j + S[i] + f) % SBOX_SIZE
-        S[i], S[j] = S[j], S[i]
-    return S
-
-def enhanced_rc4_crypt(data_bytes, key_str):
-    key = custom_key_preprocess(key_str)
-    S = enhanced_ksa(key)
-    i = j = 0
-    output = []
-    for byte in data_bytes:
-        i = (i + 1) % SBOX_SIZE
-        j = (j + S[i]) % SBOX_SIZE
-        S[i], S[j] = S[j], S[i]
-        t = (S[i] + S[j]) % SBOX_SIZE
-        k_t = S[t]
-        output.append(byte ^ k_t)
-    return bytes(output)
 
 ###############################################################################
 #                     Firestore Communication Functions                       #
